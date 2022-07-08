@@ -8,6 +8,19 @@
         <session-timeout>20</session-timeout>
     </session-config>
 
+    <display-name>test</display-name>
+    <welcome-file-list>
+        <welcome-file>excelTest.html</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>excelServlet</servlet-name>
+        <servlet-class>Secondapp.excelServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>excelServlet</servlet-name>
+        <url-pattern>/excel</url-pattern>
+    </servlet-mapping>
+
     <!--
     <login-config>
         <auth-method>XSUAA</auth-method>
@@ -37,7 +50,7 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-    <filter>
+    <!--filter>
         <filter-name>HttpSecurityHeadersFilter</filter-name>
         <filter-class>com.sap.cloud.sdk.cloudplatform.security.servlet.HttpSecurityHeadersFilter</filter-class>
     </filter>
@@ -53,5 +66,5 @@
     <filter-mapping>
         <filter-name>HttpCachingHeaderFilter</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    </filter-mapping-->
 </web-app>
